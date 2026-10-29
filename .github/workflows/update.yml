@@ -33,5 +33,9 @@ jobs:
           git config user.email "actions@github.com"
           git add index.html about.html terms.html privacy.html contact.html
           git commit -m "Auto-update: $(date)" || exit 0
-          git pull --rebase origin main
+          echo "=== Fetching latest remote changes ==="
+          git fetch origin main
+          echo "=== Rebasing onto remote main ==="
+          git rebase origin/main
+          echo "=== Pushing ==="
           git push
