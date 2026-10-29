@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://cyclonearnab.com/</loc>
-    <lastmod>2026-10-29</lastmod>
-  </url>
+  <url><loc>https://cyclonearnab.com/</loc></url>
+  <url><loc>https://cyclonearnab.com/about.html</loc></url>
+  <url><loc>https://cyclonearnab.com/terms.html</loc></url>
+  <url><loc>https://cyclonearnab.com/privacy.html</loc></url>
+  <url><loc>https://cyclonearnab.com/contact.html</loc></url>
 </urlset>
