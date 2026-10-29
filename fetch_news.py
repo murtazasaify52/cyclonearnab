@@ -5,6 +5,7 @@ from datetime import datetime
 IMD_RSS = "https://cap-sources.s3.amazonaws.com/in-imd-en/rss.xml"
 GDACS_RSS = "https://www.gdacs.org/xml/rss.xml"
 DOMAIN = "https://cyclonearnab.com"
+SALE_EMAIL = "random.domain666@gmail.com"
 
 NAV = """<nav>
   <a href="/">Home</a>
@@ -13,6 +14,11 @@ NAV = """<nav>
   <a href="/privacy.html">Privacy Policy</a>
   <a href="/contact.html">Contact</a>
 </nav>"""
+
+BANNER = f"""<div style="background:#ff9800;color:#1a1a2e;text-align:center;padding:12px 20px;font-weight:600;font-size:0.95em;">
+  💰 This domain (cyclonearnab.com) is for sale — Contact:
+  <a href="mailto:{SALE_EMAIL}" style="color:#0f3460;text-decoration:underline;">{SALE_EMAIL}</a>
+</div>"""
 
 def head(title, desc, url):
     return f"""<!DOCTYPE html>
@@ -26,12 +32,14 @@ def head(title, desc, url):
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+{BANNER}
 <header><div class="container"><h1><a href="/">🌀 Cyclone Arnab</a></h1>{NAV}</div></header>
 <main><div class="container">"""
 
 def foot():
     return f"""</div></main>
 <footer><div class="container">
+<p style="color:#ff9800;font-weight:600;">This domain is for sale — <a href="mailto:{SALE_EMAIL}" style="color:#ffcc80;">{SALE_EMAIL}</a></p>
 <p>&copy; {datetime.now().year} Cyclone Arnab. All rights reserved.</p>
 <p><a href="/about.html">About</a> | <a href="/terms.html">Terms</a> | <a href="/privacy.html">Privacy</a> | <a href="/contact.html">Contact</a></p>
 <p style="margin-top:10px;font-size:0.8em;">Data sources: IMD &amp; GDACS. For informational purposes only.</p>
@@ -81,6 +89,8 @@ def build_static():
 </ul>
 <h3>Important Disclaimer</h3>
 <p>This site aggregates publicly available data. It is <strong>not</strong> a substitute for official government warnings. Always follow instructions from your local authorities during a cyclone emergency.</p>
+<h3>Domain Availability</h3>
+<p>This domain (cyclonearnab.com) is currently available for purchase. For inquiries, please contact <a href="mailto:random.domain666@gmail.com">random.domain666@gmail.com</a>.</p>
 """),
         "terms.html": ("Terms & Conditions", "Terms and conditions for using Cyclone Arnab.", """
 <h2>Terms &amp; Conditions</h2>
@@ -93,7 +103,9 @@ def build_static():
 <p>Cyclone Arnab shall not be liable for any damages arising from the use of, or inability to use, this website or its content.</p>
 <h3>4. External Links</h3>
 <p>This site contains links to external websites. We are not responsible for the content or privacy practices of those sites.</p>
-<h3>5. Changes</h3>
+<h3>5. Domain Sale</h3>
+<p>This domain may be sold or transferred at any time. Contact <a href="mailto:random.domain666@gmail.com">random.domain666@gmail.com</a> for inquiries.</p>
+<h3>6. Changes</h3>
 <p>We may update these terms at any time. Continued use of the site constitutes acceptance of the updated terms.</p>
 """),
         "privacy.html": ("Privacy Policy", "Privacy policy for Cyclone Arnab.", """
@@ -113,7 +125,7 @@ def build_static():
 <p>We welcome feedback, corrections, and partnership inquiries.</p>
 <h3>Email</h3>
 <p>Please reach out to us at: <strong>contact@cyclonearnab.com</strong></p>
-<p>(Replace this email with a working address you control, or use a free contact form service such as Formspree.)</p>
+<p>For domain purchase inquiries, contact <a href="mailto:random.domain666@gmail.com">random.domain666@gmail.com</a>.</p>
 <h3>Response Time</h3>
 <p>We aim to respond to all messages within 2–3 business days.</p>
 """),
